@@ -35,8 +35,19 @@ end
 # PHASE 4
 class BestFriend
   def initialize(name, yrs_known, fav_pastime)
+    if name.length == 0
+      raise "Best friend? WHO THE HECK ARE YOU?"
+    end 
     @name = name
+    
+    if yrs_known < 5
+      raise "Best friend? for real?"
+    end
     @yrs_known = yrs_known
+    
+    if fav_pastime.length == 0
+      raise "Macrame? Baseball? Hell if I know."
+    end 
     @fav_pastime = fav_pastime
   end
 
