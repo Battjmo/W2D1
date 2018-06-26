@@ -1,10 +1,11 @@
 require_relative "piece"
 require_relative "cursor"
 require_relative "display"
+require_relative "piece"
 
 class Board
   attr_reader :grid
-  
+
   def initialize
     @grid = Array.new(8) {Array.new(8)}
     populate
